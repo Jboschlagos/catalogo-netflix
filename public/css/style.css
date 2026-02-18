@@ -1,0 +1,151 @@
+/* Estilos personalizados para el Catálogo Netflix */
+
+/* Ajustes generales */
+.card {
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1) !important;
+}
+
+.table-responsive {
+    max-height: 400px;
+    overflow-y: auto;
+    border-radius: 8px;
+}
+
+.btn-list {
+    min-width: 180px;
+    padding: 12px 20px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+}
+
+.btn-list:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Navbar */
+.navbar-brand {
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 0.8);
+    transition: color 0.3s ease;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: #fff;
+    transform: translateY(-1px);
+}
+
+/* Main content */
+main {
+    min-height: calc(100vh - 140px);
+    flex: 1 0 auto;
+}
+
+/* Footer */
+footer {
+    font-size: 0.9rem;
+    background: linear-gradient(135deg, #1e2a3a, #2c3e50);
+    color: #ecf0f1;
+    margin-top: auto;
+}
+
+footer hr {
+    opacity: 0.2;
+}
+
+/* Tabla */
+.table thead th {
+    background-color: #343a40;
+    color: white;
+    font-weight: 600;
+    border-bottom: none;
+}
+
+.table tbody tr:hover {
+    background-color: rgba(0,123,255,0.05);
+    cursor: pointer;
+}
+
+/* Formularios */
+.form-control:focus {
+    border-color: #80bdff;
+    box-shadow: 0 0 0 0.2rem rgba(0,123,255,0.25);
+}
+
+/* Alertas personalizadas (para js) */
+.alert {
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .btn-list {
+        min-width: 150px;
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+    
+    h1.display-5 {
+        font-size: 2rem;
+    }
+    
+    .lead {
+        font-size: 1rem;
+    }
+}
+
+/* Badges (por si los usamos después) */
+.badge-pelicula {
+    background-color: #007bff;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+}
+
+.badge-serie {
+    background-color: #28a745;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+}
+
+/* Spinner de carga */
+.spinner {
+    border: 3px solid #f3f3f3;
+    border-top: 3px solid #3498db;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    margin: 20px auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
